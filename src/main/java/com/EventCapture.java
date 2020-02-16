@@ -36,11 +36,13 @@ public class EventCapture implements WebDriverEventListener {
 	public void beforeNavigateTo(String url, WebDriver driver) {
 		// TODO Auto-generated method stub
 		
+		
 	}
 
 	@Override
 	public void afterNavigateTo(String url, WebDriver driver) {
 		// TODO Auto-generated method stub
+		System.out.println("navigated");
 		
 	}
 
@@ -89,6 +91,7 @@ public class EventCapture implements WebDriverEventListener {
 	@Override
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
+		System.out.println("element located");
 		
 	}
 
@@ -101,6 +104,7 @@ public class EventCapture implements WebDriverEventListener {
 	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
+		System.out.println("successfully clicked");
 		
 	}
 
@@ -113,6 +117,7 @@ public class EventCapture implements WebDriverEventListener {
 	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
 		// TODO Auto-generated method stub
+		System.out.println("value entered");
 		
 	}
 
@@ -143,6 +148,7 @@ public class EventCapture implements WebDriverEventListener {
 	@Override
 	public void onException(Throwable throwable, WebDriver driver) {
 		// TODO Auto-generated method stub
+		System.out.println("exception occured");
 		
 	}
 

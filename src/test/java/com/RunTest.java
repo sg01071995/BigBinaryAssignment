@@ -4,10 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -17,7 +15,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class RunTest extends CommonMethods {
-	static WebDriver driver;
+	static EventFiringWebDriver driver;
+	
 
 	@BeforeTest
 	public void closeRunningBrowsers() throws IOException
@@ -57,7 +56,8 @@ public class RunTest extends CommonMethods {
 		getLocator("inputLastName").sendKeys(lName);
 		
 		WebElement a = getLocator("agreeTerms");
-		new Actions(driver).click(a);
+		a.click();
+//		new Actions(driver).click(a);
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("arguments[0].setAttribute('value', 'true')", a);
 //		js.executeScript("document.getElementById('//id of element').setAttribute('attr', '10')");

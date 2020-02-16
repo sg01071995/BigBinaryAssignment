@@ -15,9 +15,9 @@ public class CommonMethods extends BasePage {
 		switch(prop.getProperty(element).split("<>")[0])
 		{
 		case "xpath":
-			return driver.findElement(By.xpath(prop.getProperty(element).split("<>")[1]));
+			return wDriver.findElement(By.xpath(prop.getProperty(element).split("<>")[1]));
 		case "cssSelector" :
-			return driver.findElement(By.cssSelector(prop.getProperty(element).split("<>")[1]));
+			return wDriver.findElement(By.cssSelector(prop.getProperty(element).split("<>")[1]));
 		}
 		return null;
 	}
