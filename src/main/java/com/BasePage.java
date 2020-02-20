@@ -15,7 +15,7 @@ public class BasePage {
 
 	WebDriver driver;
 	EventFiringWebDriver wDriver;
-	EventCapture eCapture = new EventCapture();
+	public static EventCapture eCapture = new EventCapture();
 	
 
 	private static final String ALPHA_STRING = "qwertyuiopasdfghjklzxcvbnm";
